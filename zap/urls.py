@@ -1,11 +1,14 @@
-from django.urls import path
+from django.urls import path, reverse
 from django.conf.urls import include, url
 from django.contrib import admin
+from django.conf.urls.static import static, serve
+from django.contrib.auth.views import LoginView, logout_then_login
+from django.conf import settings
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from rest_framework_swagger.views import get_swagger_view
 from rest_framework import permissions
-from .views import index
+from .views import index, app, home
 
 swagger_schema_view = get_swagger_view(title='Zap API')
 
@@ -33,5 +36,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # Default urls
     # path('/', index)  
-    url(r'^$', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui')
+   #  url(r'^$', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
+    
+    url(r'^app/', app, name='app'),
+    url('^auth/logout/$', logout_then_login, name='logout'),
+    url('^auth/', index, name='auth'),
+    url(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT,}),
+    url(r'^$', app, name='app')
 ]
