@@ -27,7 +27,10 @@ import ValidationForms from "views/Forms/ValidationForms.js";
 import VectorMap from "views/Maps/VectorMap.js";
 import Widgets from "views/Widgets/Widgets.js";
 import Wizard from "views/Forms/Wizard.js";
-
+import Balenciga from "views/Shopping/Balenciga.js";
+import AppleHomePad from "views/Shopping/AppleHomePad";
+import NetAPorter from "views/Shopping/NetAPorter";
+import Microsoft from "views/Shopping/Microsoft";
 // @material-ui/icons
 import Apps from "@material-ui/icons/Apps";
 import DashboardIcon from "@material-ui/icons/Dashboard";
@@ -39,6 +42,51 @@ import Timeline from "@material-ui/icons/Timeline";
 import WidgetsIcon from "@material-ui/icons/Widgets";
 
 var dashRoutes = [
+  {
+    collapse: true,
+    name: "Shoppings",
+    rtlName: "الجداول",
+    icon: GridOn,
+    state: "shoppingsCollapse",
+    views: [
+      {
+        path: "/balenciga-shoppings",
+        name: "Balenciga",
+        rtlName: "طاولات عادية",
+        mini: "BS",
+        rtlMini: "صر",
+        component: Balenciga,
+        layout: "/admin"
+      },
+      {
+        path: "/applehomepad-shoppings",
+        name: "Apple HomePad",
+        rtlName: "جداول ممتدة",
+        mini: "AH",
+        rtlMini: "هور",
+        component: AppleHomePad,
+        layout: "/admin"
+      },
+      {
+        path: "/netaporter-shoppings",
+        name: "Net A Porter",
+        rtlName: "طاولات عادية",
+        mini: "NA",
+        rtlMini: "صر",
+        component: NetAPorter,
+        layout: "/admin"
+      },
+      {
+        path: "/microsoft-shoppings",
+        name: "Microsoft",
+        rtlName: "طاولات عادية",
+        mini: "MS",
+        rtlMini: "صر",
+        component: Microsoft,
+        layout: "/admin"
+      }
+    ]
+  },
   {
     path: "/dashboard",
     name: "Dashboard",
@@ -359,6 +407,6 @@ var dashRoutes = [
     icon: DateRange,
     component: Calendar,
     layout: "/admin"
-  }
+  },
 ];
 export default dashRoutes;

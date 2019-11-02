@@ -27,17 +27,15 @@ module.exports = {
         exclude: /(node_modules)/,
       },
       {
-        test: /\.(woff2|ttf|woff|eot)$/,
+        test: /\.(woff2|woff|ttf|woff|eot)$/,
         use: [
           {
             loader: 'url-loader',
             options: {
-              outputPath: commonPaths.fontsFolder,
+              // outputPath: commonPaths.fontsFolder,
+              name: `${commonPaths.fontsFolder}/[name].[ext]`,
             },
           },
-          // {
-          //   loader: 'url-loader'
-          // },
         ],
       },
     ],

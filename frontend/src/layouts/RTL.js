@@ -28,7 +28,7 @@ export default function RTL(props) {
   // states and functions
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [miniActive, setMiniActive] = React.useState(false);
-  const [image, setImage] = React.useState(require("assets/img/sidebar-2.jpg"));
+  const [image, setImage] = React.useState("");
   const [color, setColor] = React.useState("blue");
   const [bgColor, setBgColor] = React.useState("black");
   // const [hasImage, setHasImage] = React.useState(true);
@@ -65,7 +65,9 @@ export default function RTL(props) {
   });
   // functions for changeing the states from components
   const handleImageClick = image => {
-    setImage(image);
+    // setImage(image);
+    console.log('==== image')
+    setImage('')
   };
   const handleColorClick = color => {
     setColor(color);

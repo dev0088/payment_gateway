@@ -98,7 +98,8 @@ const container = {
 };
 
 const defaultFont = {
-  fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+  // fontFamily: '"Sofia Pro", "Roboto", "Helvetica", "Arial", sans-serif',
+  fontFamily: 'Sofia Pro',
   fontWeight: "300",
   lineHeight: "1.5em"
 };
@@ -174,6 +175,8 @@ const tumblrColor = "#35465c";
 const behanceColor = "#1769ff";
 const dribbbleColor = "#ea4c89";
 const redditColor = "#ff4500";
+const zapBuyButtonBlackColor = "#000000";
+const zapBuyButtonRedColor = "#CC0005";
 
 const boxShadow = {
   boxShadow:
@@ -408,6 +411,8 @@ export {
   behanceColor,
   dribbbleColor,
   redditColor,
+  zapBuyButtonBlackColor,
+  zapBuyButtonRedColor,
   primaryBoxShadow,
   infoBoxShadow,
   successBoxShadow,

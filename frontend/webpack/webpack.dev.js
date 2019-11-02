@@ -64,7 +64,69 @@ module.exports = {
             }
           }
         ]
-      }
+      },
+      // {
+      //   test: /\.(woff2|woff|ttf|woff|eot)$/,
+      //   use: [
+      //     {
+      //       loader: 'url-loader',
+      //       options: {
+      //         outputPath: commonPaths.fontsFolder,
+      //         name: `${commonPaths.fontsFolder}/[name].[ext]`,
+      //       },
+      //     },
+      //   ],
+      // },
+      
+      // // WOFF Font
+      // {
+      //   test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
+      //   use: {
+      //     loader: 'url-loader',
+      //     options: {
+      //       limit: 10000,
+      //       mimetype: 'application/font-woff'
+      //     }
+      //   }
+      // },
+      // // WOFF2 Font
+      // {
+      //   test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,
+      //   use: {
+      //     loader: 'url-loader',
+      //     options: {
+      //       limit: 10000,
+      //       mimetype: 'application/font-woff'
+      //     }
+      //   }
+      // },
+      // // TTF Font
+      // {
+      //   test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+      //   use: {
+      //     loader: 'url-loader',
+      //     options: {
+      //       limit: 10000,
+      //       mimetype: 'application/octet-stream'
+      //     }
+      //   }
+      // },
+      // // OTF Font
+      // {
+      //   test: /\.otf(\?v=\d+\.\d+\.\d+)?$/,
+      //   use: {
+      //     loader: 'url-loader',
+      //     options: {
+      //       limit: 10000,
+      //       mimetype: 'application/octet-stream'
+      //     }
+      //   }
+      // },
+      // // EOT Font
+      // {
+      //   test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+      //   use: 'file-loader'
+      // },
     ],
   },
   devServer: {

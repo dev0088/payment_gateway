@@ -27,7 +27,8 @@ export default function Dashboard(props) {
   // states and functions
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [miniActive, setMiniActive] = React.useState(false);
-  const [image, setImage] = React.useState(require("assets/img/sidebar-2.jpg"));
+  // const [image, setImage] = React.useState(require("assets/img/sidebar-2.jpg"));
+  const [image, setImage] = React.useState("");
   const [color, setColor] = React.useState("blue");
   const [bgColor, setBgColor] = React.useState("black");
   // const [hasImage, setHasImage] = React.useState(true);
@@ -66,7 +67,8 @@ export default function Dashboard(props) {
   });
   // functions for changeing the states from components
   const handleImageClick = image => {
-    setImage(image);
+    // setImage(image);
+    setImage("")
   };
   const handleColorClick = color => {
     setColor(color);
@@ -144,7 +146,7 @@ export default function Dashboard(props) {
     <div className={classes.wrapper}>
       <Sidebar
         routes={routes}
-        logoText={"Creative Tim"}
+        logoText={"Zap"}
         logo={logo}
         image={image}
         handleDrawerToggle={handleDrawerToggle}
