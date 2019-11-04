@@ -1,6 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import PropTypes from "prop-types";
+import { NavLink } from "react-router-dom";
 // import { Manager, Target, Popper } from "react-popper";
 
 // @material-ui/core components
@@ -263,18 +264,22 @@ export default function HeaderLinks(props) {
               <Paper className={classes.dropdown}>
                 <ClickAwayListener onClickAway={handleCloseProfile}>
                   <MenuList role="menu">
-                    <MenuItem
-                      onClick={handleCloseProfile}
-                      className={dropdownItem}
-                    >
-                      {rtlActive ? "الملف الشخصي" : "Profile"}
-                    </MenuItem>
-                    <MenuItem
-                      onClick={handleCloseProfile}
-                      className={dropdownItem}
-                    >
-                      {rtlActive ? "الإعدادات" : "Settings"}
-                    </MenuItem>
+                    <NavLink to={"/app/user-page"}>
+                      <MenuItem
+                        onClick={handleCloseProfile}
+                        className={dropdownItem}
+                      >
+                        {rtlActive ? "الملف الشخصي" : "Profile"}  
+                      </MenuItem>
+                    </NavLink>
+                    <NavLink to={"/app/user-page"}>
+                      <MenuItem
+                        onClick={handleCloseProfile}
+                        className={dropdownItem}
+                      >
+                        {rtlActive ? "الإعدادات" : "Settings"}
+                      </MenuItem>
+                    </NavLink>
                     <Divider light />
                     <MenuItem
                       onClick={handleCloseProfile}
