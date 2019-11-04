@@ -43,51 +43,6 @@ import WidgetsIcon from "@material-ui/icons/Widgets";
 
 var dashRoutes = [
   {
-    collapse: true,
-    name: "Shoppings",
-    rtlName: "الجداول",
-    icon: GridOn,
-    state: "shoppingsCollapse",
-    views: [
-      {
-        path: "/balenciga-shoppings",
-        name: "Balenciga",
-        rtlName: "طاولات عادية",
-        mini: "BS",
-        rtlMini: "صر",
-        component: Balenciga,
-        layout: "/admin"
-      },
-      {
-        path: "/applehomepad-shoppings",
-        name: "Apple HomePad",
-        rtlName: "جداول ممتدة",
-        mini: "AH",
-        rtlMini: "هور",
-        component: AppleHomePad,
-        layout: "/admin"
-      },
-      {
-        path: "/netaporter-shoppings",
-        name: "Net A Porter",
-        rtlName: "طاولات عادية",
-        mini: "NA",
-        rtlMini: "صر",
-        component: NetAPorter,
-        layout: "/admin"
-      },
-      {
-        path: "/microsoft-shoppings",
-        name: "Microsoft",
-        rtlName: "طاولات عادية",
-        mini: "MS",
-        rtlMini: "صر",
-        component: Microsoft,
-        layout: "/admin"
-      }
-    ]
-  },
-  {
     path: "/dashboard",
     name: "Dashboard",
     rtlName: "لوحة القيادة",
@@ -407,6 +362,51 @@ var dashRoutes = [
     icon: DateRange,
     component: Calendar,
     layout: "/admin"
+  },
+  {
+    collapse: true,
+    name: "Shoppings",
+    rtlName: "الجداول",
+    icon: GridOn,
+    state: "shoppingsCollapse",
+    views: [
+      {
+        path: "/balenciga-shoppings",
+        name: "Balenciga",
+        rtlName: "طاولات عادية",
+        mini: "BS",
+        rtlMini: "صر",
+        component: Balenciga,
+        layout: "/admin"
+      },
+      {
+        path: "/applehomepad-shoppings",
+        name: "Apple HomePad",
+        rtlName: "جداول ممتدة",
+        mini: "AH",
+        rtlMini: "هور",
+        component: AppleHomePad,
+        layout: "/admin"
+      },
+      {
+        path: "/netaporter-shoppings",
+        name: "Net A Porter",
+        rtlName: "طاولات عادية",
+        mini: "NA",
+        rtlMini: "صر",
+        component: NetAPorter,
+        layout: "/admin"
+      },
+      {
+        path: "/microsoft-shoppings",
+        name: "Microsoft",
+        rtlName: "طاولات عادية",
+        mini: "MS",
+        rtlMini: "صر",
+        component: Microsoft,
+        layout: "/admin"
+      }
+    ]
   },
 ];
 export default dashRoutes;
