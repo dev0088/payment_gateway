@@ -34,8 +34,8 @@ ReactDOM.render(
     <Switch>
       <Route path="/rtl" component={RtlLayout} />
       <Route path="/auth" component={AuthLayout} />
-      <Route path="/admin" component={AdminLayout} />
-      <Redirect from="/" to="/admin/balenciga-shoppings" />
+      <Route path="/app" component={AdminLayout} />
+      <Redirect from="/" to="/app/dashboard" />
     </Switch>
   </Router>,
   document.getElementById("root")

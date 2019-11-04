@@ -95,7 +95,7 @@ export default function Dashboard(props) {
     setMobileOpen(!mobileOpen);
   };
   const getRoute = () => {
-    return window.location.pathname !== "/admin/full-screen-maps";
+    return window.location.pathname !== "/app/full-screen-maps";
   };
   const getActiveRoute = routes => {
     let activeRoute = "Default Brand Text";
@@ -120,7 +120,7 @@ export default function Dashboard(props) {
       if (prop.collapse) {
         return getRoutes(prop.views);
       }
-      if (prop.layout === "/admin") {
+      if (prop.layout === "/app") {
         return (
           <Route
             path={prop.layout + prop.path}
@@ -170,7 +170,7 @@ export default function Dashboard(props) {
             <div className={classes.container}>
               <Switch>
                 {getRoutes(routes)}
-                <Redirect from="/admin" to="/admin/dashboard" />
+                <Redirect from="/app" to="/app/dashboard" />
               </Switch>
             </div>
           </div>
@@ -178,7 +178,7 @@ export default function Dashboard(props) {
           <div className={classes.map}>
             <Switch>
               {getRoutes(routes)}
-              <Redirect from="/admin" to="/admin/dashboard" />
+              <Redirect from="/app" to="/app/dashboard" />
             </Switch>
           </div>
         )}
