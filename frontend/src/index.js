@@ -18,6 +18,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { createBrowserHistory } from "history";
 import { Router, Route, Switch, Redirect } from "react-router-dom";
+import { Provider } from 'react-redux';
+import { configureStore } from './store/configureStore';
 
 import AuthLayout from "layouts/Auth.js";
 import RtlLayout from "layouts/RTL.js";
@@ -28,16 +30,19 @@ import "assets/fonts/stylesheet.css";
 import * as serviceWorker from './serviceWorker';
 
 const hist = createBrowserHistory();
+const store = configureStore();
 
 ReactDOM.render(
-  <Router history={hist}>
-    <Switch>
-      <Route path="/rtl" component={RtlLayout} />
-      <Route path="/auth" component={AuthLayout} />
-      <Route path="/app" component={AdminLayout} />
-      <Redirect from="/" to="/app/dashboard" />
-    </Switch>
-  </Router>,
+  <Provider store={store}>
+    <Router history={hist}>
+      <Switch>
+        <Route path="/rtl" component={RtlLayout} />
+        <Route path="/auth" component={AuthLayout} />
+        <Route path="/app" component={AdminLayout} />
+        <Redirect from="/" to="/app/dashboard" />
+      </Switch>
+    </Router>
+  </Provider>,
   document.getElementById("root")
 );
 serviceWorker.unregister();

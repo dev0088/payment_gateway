@@ -17,7 +17,7 @@ schema_view = get_schema_view(
       title="Zap API",
       default_version='v1',
       description="REST API for Zap web and mobile app",
-      terms_of_service="https://www.shiptalent.com/terms/",
+      terms_of_service="hhttps://zapbackend.herokuapp.com/termsofservice/",
       contact=openapi.Contact(email="administrator@zap.com"),
       license=openapi.License(name="zap.com"),
    ),
